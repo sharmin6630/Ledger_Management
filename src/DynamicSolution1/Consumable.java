@@ -1,7 +1,7 @@
 package DynamicSolution1;
 
 public class Consumable {
-	protected String type;
+    protected String type;
     protected String name = "";
     protected String startDate = "";
     protected String endDate = "";
