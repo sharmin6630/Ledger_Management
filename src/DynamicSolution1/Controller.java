@@ -16,7 +16,7 @@ public class Controller {
 		}
 		consumableList.put(name, new Consumable(type, name, startDate, endDate, rating,
 	    		consumedHours, consumedDays, hasEnded));
-		System.out.println("\n**Consumable Added.");
+		System.out.println("\n**Consumable "+ name + " Added.");
 		
 	}
 	
@@ -56,16 +56,33 @@ public class Controller {
 	public void showIndividual(String name) {
 		obj = consumableList.get(name);
 		view.printFirstFields();
-		view.printConsumable(obj.getType(), obj.getName(), obj.getStartDate(), obj.getEndDate(), 
-				obj.getRating(), obj.getConsumedHours(), obj.getConsumedDays());
+		view.printConsumable(obj.getType(), obj.getName(), checkDate(obj.getStartDate()), checkDate(obj.getEndDate()), 
+				checkRating(obj.getRating()), obj.getConsumedHours(), obj.getConsumedDays());
+	}
+	
+	public String checkDate(String date) {
+		if(date == "0")
+			return "";
+		else
+			return date;
+	}
+	
+	public String checkRating(double rating) {
+		if(rating == 0.0) {
+			return "";
+		}
+		
+		else {
+			return Double.toString(rating);
+		}
 	}
 	
 	public void showType(String type) {
 		view.printFirstFields();
 		for(Consumable x: consumableList.values()) {
 			if(x.getType() == type) {
-				view.printConsumable(x.getType(), x.getName(), x.getStartDate(), 
-						x.getEndDate(), x.getRating(), x.getConsumedHours(), 
+				view.printConsumable(x.getType(), x.getName(), checkDate(x.getStartDate()), 
+						checkDate(x.getEndDate()), checkRating(x.getRating()), x.getConsumedHours(), 
 						x.getConsumedDays());
 			}
 		}
@@ -74,8 +91,8 @@ public class Controller {
 	public void showAll() {
 		view.printFirstFields();
 		for(Consumable x: consumableList.values()){
-			view.printConsumable(x.getType(), x.getName(), x.getStartDate(), x.getEndDate(), 
-					x.getRating(), x.getConsumedHours(), x.getConsumedDays());
+			view.printConsumable(x.getType(), x.getName(), x.getStartDate(), checkDate(x.getEndDate()), 
+					checkRating(x.getRating()), x.getConsumedHours(), x.getConsumedDays());
 		}
 	}
 	
@@ -143,20 +160,18 @@ public class Controller {
 		
 	}
 	
-	
 	public void addTenConsumable() {
-		addConsumable("Series", "Stranger Things", "2018-02-04", "2020-06-08", 8.5, 24, 2, true);
+		addConsumable("Series", "Stranger Things", "2018-02-04", "", 8.5, 24, 2, false);
 		addConsumable("Series", "West World", "2018-02-04", "2020-06-08", 8.5, 24, 2, true);
 		addConsumable("Series", "Friends", "2018-02-04", "2020-06-08", 8.5, 24, 2, true);
-		addConsumable("Series", "Attack on titan", "2018-02-04", "2020-06-08", 8.5, 24, 2, true);
+		addConsumable("Series", "Attack on titan", "2018-02-04", "2020-06-08", 0, 24, 2, true);
 		addConsumable("Book", "The Alchemist", "2018-02-04", "", 8.5, 5, 1, false);
-		addConsumable("Book", "Gone Girl", "2018-02-04", "2018-02-04", 8.5, 5, 1, true);
+		addConsumable("Book", "Gone Girl", "2018-02-04", "2018-02-04", 0, 5, 1, true);
 		addConsumable("Book", "Lord of the Rings", "2018-02-04", "2018-03-04", 9, 5, 1, true);
 		updateConsumable("The Alchemist", 5, 1, 8.5, "2018-02-0", true);
 		addConsumable("Movie", "Fight Club", "2012-02-04", "2012-02-05", 9, 3, 0, true);
 		addConsumable("Movie", "Parasite", "2019-02-04", "2019-02-04", 9, 3, 1, true);
 		addConsumable("Movie", "Your Name", "2019-02-04", "2019-02-04", 9, 3, 1, true);
 	}
-	
 	
 }
