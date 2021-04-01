@@ -18,10 +18,23 @@ This is a Ledger to track the pieces of art (series, movies, books) that a user 
   <img src="https://github.com/sharmin6630/Ledger_Management/blob/main/snapshots/Add.png" title="Add option">
 </p>
 
+    - After adding 
+    <p align="center">
+      <img src="https://github.com/sharmin6630/Ledger_Management/blob/main/snapshots/afteradding.png" title="Add option">
+    </p>
+    
+
 - Edit a Consumable
 <p align="center">
   <img src="https://github.com/sharmin6630/Ledger_Management/blob/main/snapshots/edit.png" title="Edit option">
 </p>
+
+    - After Editing
+    <p align="center">
+      <img src="https://github.com/sharmin6630/Ledger_Management/blob/main/snapshots/afterediting.png" title="Edit option">
+    </p>
+
+
 
 - Delete a Consumable
 <p align="center">
