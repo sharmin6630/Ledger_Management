@@ -36,7 +36,7 @@ public class StartProgram{
 				System.out.print("\nEnter 1 to add a Book, 2 for Series or 3 for Movie: ");
 				type = checkType(sc.nextInt());
 				
-				System.out.print("\nEnter "+ type + "Name: ");
+				System.out.print("\nEnter "+ type + " Name: ");
 				sc.nextLine();
 				name = sc.nextLine();
 				//System.out.println(name);
@@ -52,7 +52,7 @@ public class StartProgram{
 					hasEnded = true;
 				}
 				
-				System.out.print("\nEnter Rating (0 - 10) / 0 to Ignore: ");
+				System.out.print("\nEnter Rating (1 - 10) / 0 to Ignore: ");
 				rating = checkRating(sc.nextDouble());
 				
 				System.out.print("\nEnter Consumption time in hours / 0 to Ignore: ");
