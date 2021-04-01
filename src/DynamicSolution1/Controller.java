@@ -143,6 +143,7 @@ public class Controller {
 		
 	}
 	
+	
 	public void addTenConsumable() {
 		addConsumable("Series", "Stranger Things", "2018-02-04", "2020-06-08", 8.5, 24, 2, true);
 		addConsumable("Series", "West World", "2018-02-04", "2020-06-08", 8.5, 24, 2, true);
