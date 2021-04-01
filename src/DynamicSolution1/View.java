@@ -31,10 +31,10 @@ public class View {
 	}
 	
 	public void printConsumable(String type, String name, String startDate, String endDate,
-	    		Double rating, int consumedHours, int consumedDays) {
+	    		String rating, int consumedHours, int consumedDays) {
 		System.out.format("|%-7s|%-40s|%-15s|%-15s|%-15s|%-14s|%-14s|%n",
 	    		type, name, startDate, endDate,
-	    		Double.toString(rating), Integer.toString(consumedHours), Integer.toString(consumedDays));
+	    		rating, Integer.toString(consumedHours), Integer.toString(consumedDays));
 		System.out.println(rowDivide);
 	}
 	
