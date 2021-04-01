@@ -71,7 +71,7 @@ public class StartProgram{
 				name = sc.nextLine();
 				if(obj.searchConsumable(name) == false) {
 					System.out.println("\nConsumable does not exist.");
-					System.exit(0);
+					break;
 				}
 				else if(obj.checkEndDate(name) == true) {
 					System.out.print("\nYou can not modify a consumable with exiting Ending Date.");
@@ -84,7 +84,7 @@ public class StartProgram{
 				System.out.print("\nAdd Consumption time of "+ name + " in days / 0 to Ignore: ");
 				consumedDays = sc.nextInt();
 				
-				System.out.print("\nEdit Rating of "+ name + "(0 - 10) / 0 to Ignore: ");
+				System.out.print("\nEdit Rating of "+ name + "(1 - 10) / 0 to Ignore: ");
 				rating = sc.nextDouble();
 				
 				System.out.print("\nAdd Ending date of "+ name + " (YYYY-MM-DD) / 0 to Ignore: ");
