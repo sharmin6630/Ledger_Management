@@ -7,11 +7,11 @@ import java.text.SimpleDateFormat;
 
 public class StartProgram{
 	
-	Scanner sc = new Scanner(System.in);
-	Controller obj = new Controller();
-	View view = new View();
-	int choice;
-	String type;
+    Scanner sc = new Scanner(System.in);
+    Controller obj = new Controller();
+    View view = new View();
+    int choice;
+    String type;
     String name = "";
     String startDate = "";
     String endDate = "";
